@@ -61,4 +61,18 @@ Artwork.create!([{
     }
 ])
 
+ArtworkShare.create!([{
+    viewer_id: 1,
+    artwork_id: 2
+    },
+    {
+    viewer_id: 2,
+    artwork_id: 5
+    },
+    {
+    viewer_id: 2,
+    artwork_id: 1
+    },
+])
+
 #might need to seed joins table

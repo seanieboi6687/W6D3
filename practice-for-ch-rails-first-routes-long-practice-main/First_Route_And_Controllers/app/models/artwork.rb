@@ -41,6 +41,6 @@ class Artwork < ApplicationRecord
     source: :viewer
     
   def self.artworks_for_user_id(id)
-    Artwork.joins(:shared_viewers).where('shared_viewers.id = ? OR artworks.artist_id = ?', id, id)
+    [Artwork.where(artist_id: id), User.find(id).shared_artworks]
   end
 end
