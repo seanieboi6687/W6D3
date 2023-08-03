@@ -6,17 +6,59 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
+User.destroy_all
+Artwork.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.reset_pk_sequence!('artworks')
+
 User.create!([{
-    name:'Millie B Brown',
-    email:'ahhhmilli@aol.com'
+    username:'Millie B Brown'
     },
 
     {
-    name:'Justin Bieber',
-    email:'beeb@aol.com'
+    username:'Justin Bieber'
     },
     
     {
-    name:'Big Wayne',
-    email:'tunchi@aol.com'
-    }])
+    username:'Big Wayne'
+}])
+
+Artwork.create!([{
+    image_url: 'https://media.voguebusiness.com/photos/61b8dfb99ba90ab572dea0bd/2:3/w_2560%2Cc_limit/adidas-nft-voguebus-adidas-nft-dec-21-story.jpg',
+    title: 'Bored Ape',
+    artist_id: 1
+    },
+
+    {
+    image_url: 'https://airnfts.s3.amazonaws.com/nft-images/20210814/Cyberpunk_001_1628933289447.png',
+    title: 'Cyberpunk',
+    artist_id: 2
+    },
+
+    {
+    image_url: 'https://mediaserver.responsesource.com/press-release/tb_lrg/136827/1_King.png',
+    title: 'Crocs',
+    artist_id: 2
+    },
+
+    {
+    image_url: 'https://99designs-blog.imgix.net/blog/wp-content/uploads/2021/05/merlin_184196631_939fb22d-b909-4205-99d9-b464fb961d32-superJumbo.jpeg?auto=format&q=60&fit=max&w=930',
+    title: 'The First 5000 Days',
+    artist_id: 3
+    },
+
+#     {
+#     image_url: 'https://pbs.twimg.com/media/FtceqGzaAAcHGxB?format=jpg&name=large',
+#     title: 'Space Runners',
+#     artist_id: 3
+#     },
+
+#     {
+#     image_url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/bold-and-brash-squidward.jpg',
+#     title: 'Squidward',
+#     artist_id: 3
+# }
+])
+
+#might need to seed joins table

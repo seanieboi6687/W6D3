@@ -1,6 +1,6 @@
 class ArtworksController < ApplicationController
     def index
-        @artworks = Artwork.all
+        @artworks = Artwork.artworks_for_user_id(params[:user_id])
         render json: @artworks
     end
 
@@ -27,7 +27,7 @@ class ArtworksController < ApplicationController
     def destroy
         artwork = Artwork.find(params[:id])
         artwork.destroy
-        render json: "Delete Succesful"
+        render json: artwork
     end
 
     private
@@ -37,3 +37,5 @@ class ArtworksController < ApplicationController
     end
 
 end
+
+#should we render artwork object or the img urls?
