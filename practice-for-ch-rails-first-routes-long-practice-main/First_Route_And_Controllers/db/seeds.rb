@@ -48,17 +48,17 @@ Artwork.create!([{
     artist_id: 3
     },
 
-#     {
-#     image_url: 'https://pbs.twimg.com/media/FtceqGzaAAcHGxB?format=jpg&name=large',
-#     title: 'Space Runners',
-#     artist_id: 3
-#     },
+    {
+    image_url: 'https://pbs.twimg.com/media/FtceqGzaAAcHGxB?format=jpg&name=large',
+    title: 'Space Runners',
+    artist_id: 3
+    },
 
-#     {
-#     image_url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/bold-and-brash-squidward.jpg',
-#     title: 'Squidward',
-#     artist_id: 3
-# }
+    {
+    image_url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/bold-and-brash-squidward.jpg',
+    title: 'Squidward',
+    artist_id: 3
+    }
 ])
 
 #might need to seed joins table
