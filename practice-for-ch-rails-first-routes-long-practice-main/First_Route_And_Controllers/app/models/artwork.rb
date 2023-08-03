@@ -29,7 +29,7 @@ class Artwork < ApplicationRecord
   
   belongs_to :artist,
     foreign_key: :artist_id,
-    class_name: :User, inverse_of :artworks
+    class_name: :User, inverse_of: :artworks
 
   has_many :shares,
       foreign_key: :artwork_id,
